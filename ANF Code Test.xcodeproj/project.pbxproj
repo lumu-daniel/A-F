@@ -15,6 +15,10 @@
 		3E727EDF2672708B006C11AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E727EDD2672708B006C11AC /* LaunchScreen.storyboard */; };
 		3E727EEA2672708B006C11AC /* ANFExploreCardTableViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E727EE92672708B006C11AC /* ANFExploreCardTableViewControllerTests.swift */; };
 		3E727F03267281F7006C11AC /* ANFExploreCardTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E727F02267281F7006C11AC /* ANFExploreCardTableViewController.swift */; };
+		52ABE41E29419F200048F88D /* ExploreContentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ABE41D29419F200048F88D /* ExploreContentTableViewCell.swift */; };
+		52ABE42429423EFF0048F88D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ABE42329423EFF0048F88D /* Extensions.swift */; };
+		52ABE42629425C430048F88D /* ContentViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ABE42529425C430048F88D /* ContentViewCell.swift */; };
+		52ABE429294382350048F88D /* ExploreDataItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ABE428294382350048F88D /* ExploreDataItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +44,10 @@
 		3E727EE92672708B006C11AC /* ANFExploreCardTableViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ANFExploreCardTableViewControllerTests.swift; sourceTree = "<group>"; };
 		3E727EEB2672708B006C11AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3E727F02267281F7006C11AC /* ANFExploreCardTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ANFExploreCardTableViewController.swift; sourceTree = "<group>"; };
+		52ABE41D29419F200048F88D /* ExploreContentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreContentTableViewCell.swift; sourceTree = "<group>"; };
+		52ABE42329423EFF0048F88D /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		52ABE42529425C430048F88D /* ContentViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewCell.swift; sourceTree = "<group>"; };
+		52ABE428294382350048F88D /* ExploreDataItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreDataItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,7 +89,10 @@
 		3E727ED126727088006C11AC /* ANF Code Test */ = {
 			isa = PBXGroup;
 			children = (
-				3E727F02267281F7006C11AC /* ANFExploreCardTableViewController.swift */,
+				52ABE42229423EDA0048F88D /* Utils */,
+				52ABE41F2941A0E40048F88D /* Data */,
+				52ABE41A29419DEF0048F88D /* Views */,
+				52ABE41929419DDF0048F88D /* ViewControllers */,
 				3E727ED226727088006C11AC /* AppDelegate.swift */,
 				3E727ED426727088006C11AC /* SceneDelegate.swift */,
 				3E727ED826727088006C11AC /* Main.storyboard */,
@@ -100,6 +111,71 @@
 				3E727EEB2672708B006C11AC /* Info.plist */,
 			);
 			path = "ANF Code TestTests";
+			sourceTree = "<group>";
+		};
+		52ABE41929419DDF0048F88D /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				3E727F02267281F7006C11AC /* ANFExploreCardTableViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		52ABE41A29419DEF0048F88D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				52ABE41C29419E030048F88D /* ViewModels */,
+				52ABE41D29419F200048F88D /* ExploreContentTableViewCell.swift */,
+				52ABE42529425C430048F88D /* ContentViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		52ABE41C29419E030048F88D /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		52ABE41F2941A0E40048F88D /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				52ABE427294381A70048F88D /* Models */,
+				52ABE4212941A0FF0048F88D /* Remote */,
+				52ABE4202941A0F50048F88D /* Local */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		52ABE4202941A0F50048F88D /* Local */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
+		52ABE4212941A0FF0048F88D /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
+		52ABE42229423EDA0048F88D /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				52ABE42329423EFF0048F88D /* Extensions.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		52ABE427294381A70048F88D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				52ABE428294382350048F88D /* ExploreDataItem.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -203,9 +279,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52ABE42429423EFF0048F88D /* Extensions.swift in Sources */,
 				3E727F03267281F7006C11AC /* ANFExploreCardTableViewController.swift in Sources */,
 				3E727ED326727088006C11AC /* AppDelegate.swift in Sources */,
 				3E727ED526727088006C11AC /* SceneDelegate.swift in Sources */,
+				52ABE429294382350048F88D /* ExploreDataItem.swift in Sources */,
+				52ABE42629425C430048F88D /* ContentViewCell.swift in Sources */,
+				52ABE41E29419F200048F88D /* ExploreContentTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

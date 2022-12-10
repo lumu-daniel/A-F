@@ -9,7 +9,7 @@ import UIKit
 
 class ContentViewCell: UICollectionViewCell {
     
-    static let identifier = "ContentViewButton"
+    static let identifier = "ContentViewCell"
     
     private let contentButton: UIButton = {
         let button = UIButton()
@@ -40,8 +40,9 @@ class ContentViewCell: UICollectionViewCell {
         NSLayoutConstraint.activate(contentButtonConstraints)
     }
     
-    public func configure(with buttonTittle:String){
-        contentButton.setTitle(buttonTittle, for: .normal)
+    public func configure(with buttonTittle:Dictionary<String,String>){
+        guard let btnTitle = buttonTittle["target"] else {return}
+        contentButton.setTitle(btnTitle, for: .normal)
     }
     
 }
