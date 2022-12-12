@@ -7,14 +7,10 @@
 
 import Foundation
 
-struct ExploreDataResponse: Codable{
-    let results:[ExploreDataItem]
-}
-
 struct ExploreDataItem: Codable{
     let title: String?
     let backgroundImage: String?
-    let content: [Content]
+    let content: [Content]?
     let promoMessage: String?
     let topDescription: String?
     let bottomDescription: String?

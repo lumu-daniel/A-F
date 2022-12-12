@@ -40,8 +40,8 @@ class ContentViewCell: UICollectionViewCell {
         NSLayoutConstraint.activate(contentButtonConstraints)
     }
     
-    public func configure(with buttonTittle:Dictionary<String,String>){
-        guard let btnTitle = buttonTittle["target"] else {return}
+    public func configure(with buttonTittle:Content){
+        guard let btnTitle = buttonTittle.title else {return}
         contentButton.setTitle(btnTitle, for: .normal)
     }
     

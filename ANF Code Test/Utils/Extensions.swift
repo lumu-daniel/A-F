@@ -30,3 +30,10 @@ extension UIImage{
             return(effectiveHeight)
     }
 }
+
+extension String{
+    
+    func getHttps() -> String{
+        return self.replacingOccurrences(of: "http", with: "https")
+    }
+}

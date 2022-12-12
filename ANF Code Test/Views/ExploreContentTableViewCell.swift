@@ -11,7 +11,7 @@ class ExploreContentTableViewCell: UITableViewCell {
     
     static let identifier = "ExploreContentTableViewCell"
     
-    private var contentList:[Dictionary<String,String>] = [Dictionary<String,String>]()
+    private var contentList:[Content] = [Content]()
 
     private let backgroundImage: UIImageView = {
         let imageView = UIImageView()
@@ -61,10 +61,11 @@ class ExploreContentTableViewCell: UITableViewCell {
     
     private let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
-        layout.itemSize = CGSize(width: 500, height: 70)
+        layout.itemSize = CGSize(width: 100, height: 70)
         layout.scrollDirection = .vertical
         layout.collectionView?.translatesAutoresizingMaskIntoConstraints = false
         let uiCollectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+//        uiCollectionView.register(UINib(nibName: ContentViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: ContentViewCell.identifier)
         uiCollectionView.register(ContentViewCell.self, forCellWithReuseIdentifier: ContentViewCell.identifier)
         return uiCollectionView
     }()
@@ -82,6 +83,7 @@ class ExploreContentTableViewCell: UITableViewCell {
         collectionView.dataSource = self
         
         applyConstraints()
+         
     }
 
     required init?(coder: NSCoder) {
@@ -124,10 +126,12 @@ class ExploreContentTableViewCell: UITableViewCell {
         NSLayoutConstraint.activate(titleConstraints)
         NSLayoutConstraint.activate(promoMessageConstraints)
         NSLayoutConstraint.activate(bottomDescriptionConstraints)
+
     }
     
-    public func configureContent(with contentData: [Dictionary<String,String>]){
-        self.contentList = contentData
+    public func configureContent(with contentData: [Content]){
+        self.contentList.removeAll()
+        self.contentList.append(contentsOf: contentData)
         DispatchQueue.main.async {[weak self] in
             self?.collectionView.reloadData()
         }
